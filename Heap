@@ -1,0 +1,86 @@
+public class Heap{       19 Methods
+    private int[] items= new int[10];
+    private int size;
+    public Heap(int size){
+     this.size=size;
+    }
+
+  1.  public void insert(int value){
+      if (isFull) {
+        thrw new IllegalArgurmentException();
+      }
+    items[size++]=value;
+    bubbleup();
+    }
+  2.  public void bubbleup(){
+      var index=size-1;
+      while(index>0&&items[index]>items[parentindex(index)]){
+        swap(index,parentindex(index));
+        index=parentindex(index);
+      }
+
+    }
+  3.  public void swap(int first,int second){
+      var tmp=items[first];
+      items[first]=items[second];
+      items[second]=temp;
+    }
+  4.  public int parentindex(int index){
+      return (index-1)/2;
+    }
+    public boolean isFull(){
+      return size==items.lenght;
+    }
+  5.public void remove(){
+
+    items[o]=items[--size];
+    bubbledown
+  }
+  private void bubbledown(){
+    if (isempty) {
+      throw new IllegalArgurmentException;
+    }
+    var index=0;
+    if (index<size&&!isvalidparent(index)) {
+      swap(index,largerindex);
+      index=largerindex;
+    }
+  }
+  public int leftchildindex(int index){
+    return index*2+1;
+  }
+  public int rightchildindex(int index){
+    return index*2+2;
+  }
+  public int leftchild(int index){
+    return items[leftchildindex(index)];
+  }
+  public int rightchild(int index){
+    return items[rightchildindex(index)];
+  }
+  public boolean hasleftchild(int index){
+    return leftchildindex<=size;
+  }
+  public boolean harighchild(int index){
+    return rightchildindex<=size;
+  }
+  public boolean isvalidparent(int index){
+  if (!hasleftchild) {
+    return true;
+  }
+  if (!hasrightchild) {
+    items[index]>leftchild(index);
+  }
+    return items[index]>=leftchild(index)&&
+           items[index]>=rightchild(index);
+  }
+  public int largerchildindex(int index){
+    if (!hasleftchild(index)) {
+      return index;
+    }
+    if (!hasrightchild(index)) {
+      return leftchildindex(index);
+    }
+    return (leftchild(index)>rightchild(index))?leftchildindex(index):rightchildindex(index);
+  }
+}

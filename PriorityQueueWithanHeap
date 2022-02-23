@@ -1,0 +1,17 @@
+Compare priorityQueue with Queue in a Queue it has slower insert O(n) and faster delete O(1) While in a Heap
+it has faster insert O(log n) and slower delete O(log n);
+
+
+  public class priorityQueuewithHeap{
+      private Heap heap= new Heap;
+    1.  public void add(int item){
+        heap.insert(value);
+      }
+    2.  public int remove(){
+        return heap.remove;
+    }
+   3.public boolean isempty(){
+     return heap.isempty;
+   }
+
+}

@@ -1,0 +1,114 @@
+9.public void getnodesatdistance(int distance){
+  getnodesatdistance(root,distance);
+}
+private void getnodesatdistance(Node root,int distance){
+        if(root=null)
+          return;
+        if(distance==0)
+        System.out.println(root.value);
+        getnodesatdistance(root.leftchild,distance-1);
+        getnodesatdistance(root.rightchild,distance-1);
+}
+10. public void traverselevelorder(){
+     traverselevelorder(root);
+}
+   private void traverselevelorder(Node root){
+      for (var i=0;i<=height();i++)
+         for(var values:getnodesatdistance(i))
+         System.out.println(value);
+   }
+11.public int size(){
+   return size(root);
+}
+   private int size(Node root){
+   if(root==null)
+       return 0;
+   if(isleafNode(root))
+      return 1;
+  1+size(root.leftchild)+size(root.rightchild);
+   }
+12.public int countLeaves(){
+   return countLeaves(root);
+}
+   private int countLeaves(Node root){
+    if(root==null)
+      return 0;
+    if(isleafNode(root))
+       return 1;
+    return countLeaves(root.leftchild)+countLeaves(root.rightchild);
+   }
+13.public int getmax(){
+  if(root==null){
+  thrw new IllegalArgurmentException;
+  }
+   return getmax(root);
+}
+  private int getmax(Node root){
+  if(root.rightchild==null)
+    System.out.println;
+    return getmax(root.rightchild);
+  }
+14. public boolean contains(int value){
+       return contains(root,value);
+}
+   private boolean contains(int value){
+     if (root==null) {
+       return false;
+     }
+     if (root.value==value)
+       return true;
+
+     return contains(root.leftchild,value) ||
+            contains(root.rightchild,value);
+   }
+15.public boolean areSibling(int first, int second){
+     return areSibling(root,first,second);
+}
+   private boolean areSibling(Node root,int first, int second){
+     if (root==null) {
+       return false;
+     }
+     var areSibling=false;
+     if(!isleafNode){
+       areSibling=(root.leftchild.value==first,root.rightchild.value==second)||
+                  (root.rightchild.value==first,root.leftchild.value==second);
+
+    return areSibling||
+           areSibling(root.leftchild,first,second)||
+           areSibling(root.rightchild,first,second);
+   }
+
+16.public List<Integer> getAncestors(int value){
+   var list= new ArrayList<Integer>():
+   getAncestors(root,value,List);
+   return list;
+}
+  private boolean getAncestors(Node root,int value,ArrayList<>()list){
+    if (root==null) {
+      return false;
+    }
+    if (root.value==value) {
+      return true;
+    }
+    if(getAncestors(root.leftchild,value,list)||
+           getAncestors(root.righchild,value,list));
+           list.add(root.value);
+           return true;
+  }
+17.public boolean isbalanced(){
+    return isbalanced(root);
+
+    private boolean isbalanced(Node root){
+      if (root==null) {
+        return true;
+      }
+      var balancefactor= height(root.leftchild)-height(root.rightchild);
+
+     return Math.abs(balancefactor)<=1&&
+       isbalanced(root.leftchild)&&
+       isbalanced(root.righchild);
+    }
+18. public boolean isperfect(){
+  return  size()==Math.pow(2,heigh()+1)-1;
+}
+}
