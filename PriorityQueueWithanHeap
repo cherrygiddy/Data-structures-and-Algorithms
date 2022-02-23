@@ -13,5 +13,6 @@ it has faster insert O(log n) and slower delete O(log n);
    3.public boolean isempty(){
      return heap.isempty;
    }
+   mxbcjhdcbdhcb
 
 }
