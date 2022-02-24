@@ -27,4 +27,18 @@ public class MaxHeap{
    array[first]=array[second];
    array[second]=tmp;
  }
+3. public static int getlargestKthNumber(int[]array,int k){
+  if (k<1||k>array.lenght) {
+    throw new IllegalArgurmentException();
+  }
+  private Heap heap= new Heap;
+  for(var rs:array)
+    heap.insert(rs)
+  for(var i=0;i<k-1;i++){
+    heap.remove;
+  }
+  return heap.Max       (hea.Max is from Heap class that is
+                         return items[0];)
+}
+
 }
