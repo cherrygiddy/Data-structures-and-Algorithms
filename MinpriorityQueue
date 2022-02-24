@@ -1,0 +1,14 @@
+public class MinpriorityQueue{
+
+
+   1.public void add(int priority,String value){
+    private Minheap minheap = new Minheap;
+    minheap.insert(priority,value);
+   }
+   2.public int remove(){
+     return minheap.remove();
+   }
+  3.public boolean isempty(){
+     return minheap.isempty();
+  }
+}

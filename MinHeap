@@ -1,0 +1,92 @@
+public class Minheap{
+   private class Node{
+
+    private int key;
+    private String value;
+
+    public Node(int key,String value){
+    this.value=value;
+    this.String=String;
+    }
+   }
+   private Node[] nodes= new Node[10];
+   private int size;
+   public void insert(int key,String value){
+     if (isFull) {
+       thrw new IllegalArgurmentException();
+     }
+    nodes[size++]=new Node(value).key
+    bubbleup;
+   }
+   private boolean isFull(){
+       return  size==nodes.length;
+   }
+   public void bubbleup(){
+    var index=size-1;
+    var largerindex=smallerchildindex;
+    while(index>0&&nodes[index].key>nodes[parentindex(index)].key)
+    swap(array,parentindex(index));
+    index=parentindex(index);
+   }
+   public int parentindex(index){
+     return index-1/2;
+   }
+   public int leftchildindex(int index){
+   return index*2+1;
+   }
+   public int rightchildindex(int index){
+   return index*2+2;
+   }
+   public Node leftChild(int index){
+   return nodes[leftchildindex];
+   }
+   public Node rightchild(int index){
+   return nodes[righchildindex];
+   }
+   public boolean hasleftchild(int index){
+   return leftchildindex(index)<=size;
+   }
+   public boolean hasrightchild(int index){
+   return righchildindex(index)<=size;
+   }
+   public boolean isvalidparent(int index){
+   if(!hasleftchild){}
+   return true;
+   }
+   var isvalid=nodes[index].key<=nodes[leftChild].key;
+
+    if(hasrightchild)
+      isvalid=nodes[index].key<=nodes[righchild].key;
+
+    return isvalid;
+}
+public int  smallerchildindex(int index){
+  if (!hasleftchild) {
+    return index;
+  }
+  if (!hasrightchild) {
+    return nodes[leftChild].key;
+  }
+  return (leftChild(index).key<righchild(index).key)?leftchildindex:rightchildindex;
+}
+
+public int remove(){
+  if (isempty) {
+  thrw new IllegalArgurmentException();
+  }
+  var root=nodes[0].value;
+  nodes[0]==nodes[--size];
+  bubbledown();
+
+  return root;
+}
+public int isempty(){
+  return size==0;
+}
+public void bubbledown(){
+  var index=0;
+  while(index<=size&&!isvalidparent(index))
+  switch (nodes,smallerchildindex) {
+   index=smallerchildindex;
+  }
+}

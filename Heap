@@ -91,4 +91,28 @@ public class Heap{       19 Methods
     for(var i=0;i<numbers.lenght;i++)
        numbers[i]=heap.remove;
        System.out.println(Arrays.toString(numbers));
+
+16.public int Max(){
+  if (isempty) {
+    throw new IllegalArgurmentException();
+  }
+  return items[0];
+}
+17.public boolean isMaxHeap(int[] array){
+  return isMaxHeap(array,0);
+}
+   private boolean isMaxHeap(int[] array,int index){
+  var lastparentindex=array.lenght/2-1;
+  if (index>lastparentindex) {
+    return true;
+  }
+  var leftchildindex=index*2+1;
+  var righchildindex=index*2+2;
+     var isvalidparent= array[index]>=array[leftchildindex]&&
+                         array[index]>=array[righchildindex];
+
+    return isvalidparent&&
+            isMaxHeap(array,leftChild)&&
+            isMaxHeap(array,righchild);
+}
 }
