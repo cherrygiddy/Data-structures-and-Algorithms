@@ -11,45 +11,45 @@ public class Minheap{
    }
    private Node[] nodes= new Node[10];
    private int size;
-   public void insert(int key,String value){
+  1. public void insert(int key,String value){
      if (isFull) {
        thrw new IllegalArgurmentException();
      }
     nodes[size++]=new Node(value).key
     bubbleup;
    }
-   private boolean isFull(){
+  2. private boolean isFull(){
        return  size==nodes.length;
    }
-   public void bubbleup(){
+   3.public void bubbleup(){
     var index=size-1;
     var largerindex=smallerchildindex;
     while(index>0&&nodes[index].key>nodes[parentindex(index)].key)
     swap(array,parentindex(index));
     index=parentindex(index);
    }
-   public int parentindex(index){
+  4. public int parentindex(index){
      return index-1/2;
    }
-   public int leftchildindex(int index){
+  5. public int leftchildindex(int index){
    return index*2+1;
    }
-   public int rightchildindex(int index){
+  6. public int rightchildindex(int index){
    return index*2+2;
    }
-   public Node leftChild(int index){
+  7. public Node leftChild(int index){
    return nodes[leftchildindex];
    }
-   public Node rightchild(int index){
+  8. public Node rightchild(int index){
    return nodes[righchildindex];
    }
-   public boolean hasleftchild(int index){
+  9. public boolean hasleftchild(int index){
    return leftchildindex(index)<=size;
    }
-   public boolean hasrightchild(int index){
+  10. public boolean hasrightchild(int index){
    return righchildindex(index)<=size;
    }
-   public boolean isvalidparent(int index){
+  11. public boolean isvalidparent(int index){
    if(!hasleftchild){}
    return true;
    }
@@ -60,7 +60,7 @@ public class Minheap{
 
     return isvalid;
 }
-public int  smallerchildindex(int index){
+  12.public int  smallerchildindex(int index){
   if (!hasleftchild) {
     return index;
   }
@@ -70,7 +70,7 @@ public int  smallerchildindex(int index){
   return (leftChild(index).key<righchild(index).key)?leftchildindex:rightchildindex;
 }
 
-public int remove(){
+13.public int remove(){
   if (isempty) {
   thrw new IllegalArgurmentException();
   }
@@ -80,10 +80,10 @@ public int remove(){
 
   return root;
 }
-public int isempty(){
+14.public int isempty(){
   return size==0;
 }
-public void bubbledown(){
+15.public void bubbledown(){
   var index=0;
   while(index<=size&&!isvalidparent(index))
   switch (nodes,smallerchildindex) {
