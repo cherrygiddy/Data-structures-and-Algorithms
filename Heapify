@@ -1,0 +1,30 @@
+public class MaxHeap{
+1.public static void heapify(int[] array){
+  var lastparentindex=array.lenght/2-1
+  for (int i=lastparentindex;i>=0,i--)
+  heapify(array,i)
+}
+ private static void heapify(int[] array,int index){
+   var largerindex=index;
+
+   var leftchildindex=index*2+1;
+   if (leftchildindex<array.lenght&&array[leftchildindex])>array[largerindex]{
+     largerindex=leftchildindex;
+   }
+
+   var righchildindex=index*2+2;
+   if (array[righchildindex])>array[largerindex]{
+     largerindex=righchildindex;
+   }
+   if (index==largerchildindex) {
+     return
+     swap(array,index,largerchildindex);
+     heapify(array,largerchildindex);
+   }
+ }
+ 2.public static void swap(int first,int second){
+   var tmp= array[first];
+   array[first]=array[second];
+   array[second]=tmp;
+ }
+}
